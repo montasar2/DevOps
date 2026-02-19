@@ -1,10 +1,10 @@
 pipeline {
     agent any  // exécute le pipeline sur n'importe quel agent disponible
-  tools {
+    tools {
         maven 'M2_HOME'     
         jdk 'JAVA_HOME'      
     }
- stages {
+    stages {
 
         stage('Cloner GitHub') {
             steps {
@@ -20,9 +20,7 @@ pipeline {
             }
         }
 
-        }
-
-    }
+    } // fin de stages
 
     post {
         success {
@@ -33,4 +31,3 @@ pipeline {
         }
     }
 }
-

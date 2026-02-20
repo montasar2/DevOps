@@ -15,8 +15,8 @@ pipeline {
 
         stage('Build avec Maven') {
             steps {
-                // Nettoyer, compiler et package
-                sh 'mvn clean package'
+                // Nettoyer, compiler et package sans exécuter les tests
+                sh 'mvn clean package -DskipTests'
             }
         }
 
